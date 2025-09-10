@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Brother's Cafe - Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .page {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-link {
+            transition: transform 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-[#f7f3e9] text-[#4a4e69]">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-[#6a4c93] shadow-lg fixed bottom-0 left-0 w-full z-50 rounded-t-3xl">
+        <div class="flex justify-around items-center h-16 max-w-xl mx-auto px-4">
+            <a href="#home" class="nav-link text-white text-xs font-medium text-center flex flex-col items-center p-2 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                </svg>
+                <span class="mt-1">Home</span>
+            </a>
+            <a href="#burgers" class="nav-link text-white text-xs font-medium text-center flex flex-col items-center p-2 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <span class="mt-1">Food</span>
+            </a>
+            <a href="#drinks" class="nav-link text-white text-xs font-medium text-center flex flex-col items-center p-2 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15v-5a2 2 0 012-2h4a2 2 0 012 2v5a2 2 0 01-2 2h-4a2 2 0 01-2-2z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M16 12h.01M16 18h.01M8 18h.01M12 18h.01M8 6h.01M16 6h.01M12 6h.01"/>
+                </svg>
+                <span class="mt-1">Drinks</span>
+            </a>
+            <a href="#Combos" class="nav-link text-white text-xs font-medium text-center flex flex-col items-center p-2 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11M9 21V3m0 0H5a2 2 0 00-2 2v4m6-6h6a2 2 0 012 2v4m-8 4h8m-8 4h8m-8 4h8m-8 4h8m-8 4h8"/>
+                </svg>
+                <span class="mt-1">Combos</span>
+                </a>
+            <a href="#qr" class="nav-link text-white text-xs font-medium text-center flex flex-col items-center p-2 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v.01M12 8v.01M12 12v.01M12 16v.01M12 20v.01"/>
+                </svg>
+                <span class="mt-1">QR Code</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Pages -->
+    <main class="p-6 pb-20 max-w-2xl mx-auto">
+        
+        <!-- Home Page (Page 1) -->
+        <section id="home" class="page active">
+            <header class="text-center py-8">
+                <img src="">
+                <h1 class="text-5xl font-extrabold text-[#6a4c93] tracking-tight">2 Brother's Cafe</h1>
+                <p class="text-lg mt-2 font-medium text-[#4a4e69]">Your ultimate destination for delicious food.</p>
+            </header>
+            
+            <div class="space-y-6">
+                <div class="rounded-2xl shadow-xl overflow-hidden">
+                    <img src="https://placehold.co/1200x600/6a4c93/ffffff?text=Delicious+Food" alt="Delicious Food" class="w-full h-48 object-cover">
+                    <div class="p-6 bg-[#ffb347] text-center">
+                        <h2 class="text-3xl font-bold text-[#6a4c93]">Our Promise</h2>
+                        <p class="mt-2 text-[#4a4e69]">Experience our freshly prepared, high-quality dishes made with passion.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <h2 class="text-3xl font-bold text-[#6a4c93]">Explore Our Menu</h2>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
+                    <button onclick="navigate('burgers')" class="bg-[#ffb347] text-white py-3 px-6 rounded-full text-lg font-bold shadow-lg transition transform hover:scale-105">
+                        Food Menu
+                    </button>
+                    <button onclick="navigate('drinks')" class="bg-[#ffb347] text-white py-3 px-6 rounded-full text-lg font-bold shadow-lg transition transform hover:scale-105">
+                        Drinks Menu
+                    </button>
+                    <button onclick="navigate('Combos')" class="bg-[#ffb347] text-white py-3 px-6 rounded-full text-lg font-bold shadow-lg transition transform hover:scale-105">
+                        Combos
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Food Menu Page (Page 2-3, combined) -->
+        <section id="burgers" class="page">
+            <header class="py-8">
+                <h2 class="text-4xl font-extrabold text-[#6a4c93] tracking-tight text-center">Food Menu</h2>
+                <p class="text-center mt-2 font-medium text-[#4a4e69]">Savor every bite of our delicious offerings.</p>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Burgers Section -->
+                <div class="bg-[#ffc977] rounded-xl shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#6a4c93] mb-4">Burgers</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Aloo Tiki Burger</span><span class="font-bold">₹29</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Veg Tiki Burger</span><span class="font-bold">₹35</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Veg Cheese Burger</span><span class="font-bold">₹49</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Tandoori Burger</span><span class="font-bold">₹49</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Paneer Cheese Burger</span><span class="font-bold">₹59</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Spicy Chilli Lava Burger</span><span class="font-bold">₹79</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Special Barger</span><span class="font-bold">₹79</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Add on cheese slices</span><span class="font-bold">₹10</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Add on Dips</span><span class="font-bold">₹10</span></li>
+                    </ul>
+                </div>
+                
+                <!-- Sandwiches Section -->
+                <div class="bg-[#ffc977] rounded-xl shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#6a4c93] mb-4">Sandwiches</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Aloo Mater sandwich</span><span class="font-bold">₹49</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Vegitable sandwich</span><span class="font-bold">₹69</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Paneer Tikka sandwich</span><span class="font-bold">₹79</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Special Vegitable Sandwich</span><span class="font-bold">₹99</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Vegitable Mayo Sandwich</span><span class="font-bold">₹79</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Vegitable Tandoori Mayo Sandwich</span><span class="font-bold">₹89</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Add on cheese</span><span class="font-bold">₹10</span></li>
+                    </ul>
+                </div>
+
+                <!-- Cafe Special Sandwiches Section -->
+                <div class="bg-[#ffc977] rounded-xl shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#6a4c93] mb-4">Cafe Special Sandwiches</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Choclate sandwich</span><span class="font-bold">₹69</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Ice Cream sandwich</span><span class="font-bold">₹99</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Vegitable Pizza sandwich</span><span class="font-bold">₹119</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Cheese Pizza Sandwich</span><span class="font-bold">₹129</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Veg Club Sandwich</span><span class="font-bold">₹119</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Veg Mayo Club Sandwich</span><span class="font-bold">₹129</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Veg Paneer Masala Club Sandwich</span><span class="font-bold">₹149</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>2BROTHER'S CAFE Special Club Sandwich</span><span class="font-bold">₹169</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Add on cheese</span><span class="font-bold">₹10</span></li>
+                    </ul>
+                </div>
+                
+                 
+                <!-- Fries Section -->
+                <div class="bg-[#ffc977] rounded-xl shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#6a4c93] mb-4">Fries</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Salted Fries</span><span class="font-bold">₹49</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Peri Peri Fries</span><span class="font-bold">₹69</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Cheese Overload Fries</span><span class="font-bold">₹89</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Peri Peri Overload Cheese Fries</span><span class="font-bold">₹99</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Add On Dips</span><span class="font-bold">₹10</span></li>
+                    </ul>
+                </div>
+                <!-- Pizzas Section -->
+                <div class="bg-[#ffc977] rounded-xl shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#6a4c93] mb-4">Pizzas</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Margarita Pizza</span><span class="font-bold">₹99</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Double Cheese Margarita Pizza</span><span class="font-bold">₹129</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Corn Pizza</span><span class="font-bold">₹119</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Veg Pizza</span><span class="font-bold">₹129</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Tomato & Cheese Pizza</span><span class="font-bold">₹129</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Tandoori Veg Pizza</span><span class="font-bold">₹129</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Paneer Cheese Pizza</span><span class="font-bold">₹149</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Special Veg Pizza</span><span class="font-bold">₹149</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Double cheese Pizza</span><span class="font-bold">₹199</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Onion Pizza</span><span class="font-bold">₹119</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Tomato Pizza</span><span class="font-bold">₹119</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Capsicum Pizza</span><span class="font-bold">₹119</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Golden Corn Pizza</span><span class="font-bold">₹119</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Farm Special Pizza</span><span class="font-bold">₹149</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Mexican Pizza</span><span class="font-bold">₹149</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Tandoori Pizza</span><span class="font-bold">₹149</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Veg Loaded Cheese Pizza</span><span class="font-bold">₹199</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Add On Extra Cheese</span><span class="font-bold">₹19</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Add On Extra Cheese Bust</span><span class="font-bold">₹39</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Double Topping Extra </span><span class="font-bold">₹69</span></li>
+                    </ul>
+                </div>
+                <!-- Maggi(Butter) Section -->
+                <div class="bg-[#ffc977] rounded-xl shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#6a4c93] mb-4">Maggi(butter)</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Plain Maggi</span><span class="font-bold">₹49</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Masala Maggi</span><span class="font-bold">₹49</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Veg Maggi</span><span class="font-bold">₹69</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Masala Cheese Maggi</span><span class="font-bold">₹69</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Veg Cheese Maggi</span><span class="font-bold">₹79</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Add On Extra Cheese</span><span class="font-bold">₹10</span></li>
+                    </ul>
+                </div>
+                <!-- Garlic Bread Section -->
+                <div class="bg-[#ffc977] rounded-xl shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#6a4c93] mb-4">Garlic Bread</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Garlic Bread</span><span class="font-bold">₹99</span></li>
+                        </ul>
+                        </div>
+                        
+                <!-- Momos Section -->
+                <div class="bg-[#ffc977] rounded-xl shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#6a4c93] mb-4">Momos</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Veg Fried Momos (8pcs)</span><span class="font-bold">₹59</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Veg Paneer Momos (6pcs)</span><span class="font-bold">₹99</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Add On Dips<span><span class="font-bold">₹10</span></li>
+                    </ul>
+                </div>
+                <!-- Rolls Section -->
+                <div class="bg-[#ffc977] rounded-xl shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#6a4c93] mb-4">Rolls</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Spring Roll</span><span class="font-bold">₹79</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Add ON Dips</span><span class="font-bold">₹10</span></li>
+                    </ul>
+                </div>
+
+                <!-- Delicious Kurkure Chat Section -->
+                <div class="bg-[#ffc977] rounded-xl shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#6a4c93] mb-4"> Delicious Kurkure Chat Recipes</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Masala Kurkura Chat</span><span class="font-bold">₹39</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Cheese Masala Kurkura Chat</span><span class="font-bold">₹49</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Paneer Masala Kurkura Chat</span><span class="font-bold">₹59</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Cheese Paneer Masala Kurkura Chat</span><span class="font-bold">₹69</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Chips & Kurkura Mix Chat</span><span class="font-bold">₹49</span></li>
+                    </ul>
+                </div>
+
+
+                <!-- Corn Dishes Section -->
+                <div class="bg-[#ffc977] rounded-xl shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#6a4c93] mb-4">Corn Dish</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Masala Corn</span><span class="font-bold">₹49</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Veg Masala Corn</span><span class="font-bold">₹69</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Cheese Masala Corn</span><span class="font-bold">₹79</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Veg Cheese Masala Corn</span><span class="font-bold">₹89</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--x Drinks Menu Page (Page 4-5, combined) -->
+        <section id="drinks" class="page">
+            <header class="py-8">
+                <h2 class="text-4xl font-extrabold text-[#6a4c93] tracking-tight text-center">Drinks & More</h2>
+                <p class="text-center mt-2 font-medium text-[#4a4e69]">Refresh and relax with our wide range of beverages.</p>
+            </header>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Shakes Section -->
+                <div class="bg-[#ffc977] rounded-xl shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#6a4c93] mb-4">Shakes</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Chocolate Milk Shake</span><span class="font-bold">₹49</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Vanilla Shake</span><span class="font-bold">₹59</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Banana Shake</span><span class="font-bold">₹59</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Oreo Shake</span><span class="font-bold">₹79</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Kitkat Shake</span><span class="font-bold">₹79</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Choclate Banana Shake</span><span class="font-bold">₹79</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Choclate Shake</span><span class="font-bold">₹79</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Mango Shake</span><span class="font-bold">₹59</span></li>
+                    </ul>
+                </div>
+
+                <!-- Coffee Section -->
+                <div class="bg-[#ffc977] rounded-xl shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#6a4c93] mb-4">Coffee</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Cold Coffee</span><span class="font-bold">₹29</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Cold Coffee With Choco Syrup</span><span class="font-bold">₹39</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Cold Coffee with Ice Cream</span><span class="font-bold">₹59</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Special Cold Coffee</span><span class="font-bold">₹69</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Hot Coffee</span><span class="font-bold">₹20</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Chocolate Hot Coffee</span><span class="font-bold">₹30</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Bournvita</span><span class="font-bold">₹30</span></li>
+                    </ul>
+                </div>
+                 <!-- Coffee Section -->
+                <div class="bg-[#ffc977] rounded-xl shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#6a4c93] mb-4">Tea</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Tea</span><span class="font-bold">₹10</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Khulad Tea</span><span class="font-bold">₹20</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Lemon Tea</span><span class="font-bold">₹20</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Black Tea</span><span class="font-bold">₹20</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Milk</span><span class="font-bold">₹30</span></li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+
+                <!--Combos (Page 6-7, combined) -->
+        <section id="Combos" class="page">
+            <header class="py-8">
+                <h2 class="text-4xl font-extrabold text-[#6a4c93] tracking-tight text-center">Combos</h2>
+                <p class="text-center mt-2 font-medium text-[#4a4e69]">Experience Our .</p>
+            </header>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Combos Section -->
+                <div class="bg-[#ffc977] rounded-xl shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#6a4c93] mb-4">Combos</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Fries & Pizza & Cold Drinks</span><span class="font-bold">₹29</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Sandwich & Fries & Cold Drinks</span><span class="font-bold">₹39</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Momos & Fries & Cold Drinks</span><span class="font-bold">₹59</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Pizza & Momos & Cold Drinks</span><span class="font-bold">₹69</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>Burger & Fries & Cold Drinks</span><span class="font-bold">₹20</span></li>
+                        <li class="flex justify-between items-baseline border-b border-[#f7f3e9] py-2"><span>4 Pizaa Offer</span><span class="font-bold">₹30</span></li>
+                    </ul>
+                </div>
+              </div>
+            </section>
+
+
+        <!-- QR Code Page (Page 8) -->
+        <section id="qr" class="page">
+            <header class="py-8 text-center">
+                <h2 class="text-4xl font-extrabold text-[#6a4c93] tracking-tight">Scan to Share</h2>
+                <p class="mt-2 font-medium text-[#4a4e69]">Share this menu with friends and family!</p>
+            </header>
+            <div class="flex justify-center items-center py-6">
+                <div class="bg-white p-6 rounded-2xl shadow-xl">
+                    <div id="qrcode" class="p-2 border border-gray-200"></div>
+                </div>
+            </div>
+            <p class="text-center mt-6 text-sm text-[#4a4e69]">This QR code links directly to this menu page.</p>
+        </section>
+    </main>
+
+    <script>
+        const pages = document.querySelectorAll('.page');
+        const qrcodeContainer = document.getElementById('qrcode');
+        let hasQrCode = false;
+
+        function navigate(pageId) {
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+
+            if (pageId === 'qr' && !hasQrCode) {
+                // Generate QR code only once
+                const url = window.location.href.split('#')[0]; // Get URL without hash
+                new QRCode(qrcodeContainer, {
+                    text: url,
+                    width: 256,
+                    height: 256,
+                    colorDark : "#6a4c93",
+                    colorLight : "#f7f3e9",
+                    correctLevel : QRCode.CorrectLevel.H
+                });
+                hasQrCode = true;
+            }
+        }
+
+        // Event listeners for navigation links
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const pageId = link.getAttribute('href').substring(1);
+                navigate(pageId);
+            });
+        });
+
+        // Initial navigation based on URL hash
+        window.addEventListener('load', () => {
+            const initialPage = window.location.hash ? window.location.hash.substring(1) : 'home';
+            navigate(initialPage);
+        });
+    </script>
+</body>
+</html>
